@@ -2,11 +2,11 @@
 
     function computeSum($a, $b) {
         $data = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
-        // Validate number is positive
+        // Validate numbers are positive
         if ($a < 0 || $b < 0) return -1;
-        // Validate first number is greater than second
+        // Validate first number is less than second number
         if ($a > $b) return 0;
-        // Validate not both numbers not in array
+        // Validate not both numbers are not in array
         if (!in_array($a, $data) && !in_array($b, $data)) return 0;
         // Find index of the two nubers
         $start = array_keys($data, $a)[0];
@@ -19,4 +19,4 @@
         return array_sum($arrayToSum);
     }
 
-    print_r(computeSum(30, 70));
+    print_r(computeSum(30, 60));
